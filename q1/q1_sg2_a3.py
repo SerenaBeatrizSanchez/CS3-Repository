@@ -36,7 +36,7 @@ while True:
         exit()
     elif birth_year in Goat:
         print("Your Chinese Zodiac Sign is : Goat (羊 / Yáng)")
-        exit
+        exit()
     elif birth_year in Monkey:
         print("Your Chinese Zodiac Sign is : Monkey (猴 / Hóu)")
         exit()
