@@ -1,99 +1,80 @@
-Annex A
-Computational Thinking Exercise: "Smart School Canteen Queue"
+Annex C
+Code Quality Assessment Worksheet
 
-Section: 9-Samat___________________________ Score:____________
-C# / Name: 28 / Sanchez, 29 / Santos, 30 / Sibal   Date: 08/16/2026
+Section: 9-Samat Score:____________
 
-
-Scenario
-
-The PSHS school canteen is small and often gets crowded during lunch break. Students line up to buy food, but the process is slow because:
-
-Some students take too long to decide what to order.
-The cashier has to manually calculate totals and give change.
-There is no system to track which food items are running out.
-Your group’s task is to decompose this problem into smaller, manageable parts that could be solved with computational thinking (CT) Skills.
-
-Step 1: Identify the Big Problem
-
-Main Problem: The PSHS school canteen’s inefficient way of handling transactions causes students to get stuck in long queues.
-
-Step 2: Identify three to four Sub-Problems
-Please list possible sub-problems:
-
-1. Some students take too long to order which overall affects the already delayed process of the canteen.
-
-2. No merchandise tracking system makes the transaction processes of the canteen experience a setback.
-
-3. The cashiers have to manually calculate the total and change for each student. 
-
-4. Not all students get to eat due to limited time and long queues.
-
-Step 3: Define Computational Thinking Approaches
-For each sub-problem, apply CT skills:
-
-Sub-Problem 1: Some students take too long to order.
-CT Skill: Pattern Recognition
-Example Solution: Identify which products students like best and label them like “Popular” to spark their interest and to fasten the ordering process.
-
-Sub-Problem 2: Lack of tracking system
-CT Skill: Algorithm Design
-Example Solution: Break inventory information into smaller pieces by creating spreadsheets to track, update, record and check the stocks.
-
-Sub-Problem 3: Manual Calculation
-CT Skill: Deposition
-Example Solution: Provide a calculator for the cashier to speed up calculation process.
-
-Sub-Problem 4: Limited time and long queues
-CT Skill: Deposition
-Example Solution: Break down the entire process by implementing two cashier stations and equally dividing the queues for faster production.
-
- Step 4: Draw a flowchart or write a pseudocode for the identified sub-problem
- start
+C# / Name: 28 / Sanchez, 29 / Santos 30 / Sibal Date: 08/16/2026
 
 
-Create spreadsheet for recording orders
-Display popular products and prices
-Display products and prices
+1. Efficiency
+Which algorithm is faster when the list of numbers is very large? Why?
+Pseudocode number 1 will work faster when the list of numbers is large, because instead of using nested loops that compares every single element against every other element, it uses a single loop that checks the array once.
+
+PseudoCode 1
+PseudoCode 2
+Uses one loop.
+No
+Pseudocode 1
+Uses nested loops.
+Yes
+Pseudocode 1
+
+Checklist to guide your answer:
+2. Readability
+Which algorithm is easier to understand at first glance? What makes it clearer?
+The first algorithm is easier to understand at first glance. It’s straight to the point, and does not contain unnecessary code.
+Checklist to guide your answer:
+PseudoCode 1
+PseudoCode 2
+Yes
+Simple
+Yes (~10 lines of code)
+No
+Simple
+No (~15 lines of code)
+
+3. Maintainability
+If you had to add a new feature (like finding both max and min), which algorithm would be easier to update? Why?
+The first one. Instead of creating a new set of nested loops (which you would need to do to add the new feature to Pseudocode 2) which would disrupt the original flow of the code , you’d simply be extending the code in Pseudocode 1.
+Checklist to guide your answer:
+PseudoCode 1
+PseudoCode 2
+Yes
+No
+Yes 
+No
+Yes
+No
+
+4. Testability
+Which algorithm is easier to test with different inputs? Why?
+The first algorithm is easier to test with different inputs. Not only can you easily test it with small lists, but it checks to see if an inputted value follows fewer conditions (again, making the whole method more straightforward in general). Finally, the produced output is predictable and clear (although algorithm 2 provides a clear and predictable result as well)
+Checklist to guide your answer:
+
+PseudoCode 1
+PseudoCode 2
+Yes
+Yes
+Yes
+Yes (but algorithm 2 takes more effort)
+No
+Yes (however algorithm 1’s execution path is clear and linear compared to algorithm 2)
 
 
-While there are students in the queue
+5. Security
+Imagine the input list comes from a user. What should the algorithm check to avoid errors or misuse?
+Unfortunately, none of the algorithms check for errors in inputted values. Neither of them check to see if there are invalid inputs (like letters), empty lists, or other inputs that could crash the code. Similarly, none of the pseudocodes have a built in code or system to avoid crashing if those inputs are inputted.
+Checklist to guide your answer:
+PseudoCode 1
+PseudoCode 2
+No
+No
+No
+No
+No
+No
 
-
-    if queue ≥ 10:
-        Divide one long queue into two queues
-    else:
-        Assign student to an available cashier station
-    end if
-
-
-    Student selects product
-    Student selects quantity
-
-
-    Calculate total price
-    Display total price
-
-
-    Receive payment
-    Calculate change
-    Display change
-    If change > 0:
-       Give student change
-       Give student product/s
-    Else: 
-       Give student product/s
  
-    Record the following in the spreadsheet:
-        Product
-        Quantity
-        Total price
-        Payment
-        Change
-        Cashier station
-
-
-    Move on to the next student
-
-
-exit()
+6. Final Answer
+Based on your answers from 1 to 5, which one is the better algorithm that you will use to solve the problem of finding the highest number? Why? Summarize your answer
+We think that algorithm 1 is the way to go. Algorithm 1 is faster and straight to the point compared to algorithm 2, as it (algorithm 1) uses one loop instead of nested loops, which is also why it uses less lines of code (~10) compared to the second option (~15). Not only that, but if a person was to add a new feature to the current code, it’d be easier to do so with the first pseudocode (adding new code to the second algorithm could easily break the current code). Finally, if a user wanted to test the code with different inputs, algorithm 1’s path is clearer compared to algorithm 2.
